@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <!--
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:src="@drawable/pic1"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:contentDescription="@string/about"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:text="@string/aboutUs"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:ems="12"
+        android:inputType="text"
+        android:hint="Enter your name"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Click me"
+        android:textColor="#fff"
+        android:backgroundTint="#FF9800"
+        />
+        -->
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:contentDescription="@string/about"
+        android:src="@drawable/pic1"
+        tools:srcCompat="@drawable/pic1" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:contentDescription="banner"
+        android:padding="5dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#4ACCC1"
+        android:textColorLink="#C3FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="@string/aboutUs" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="12"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:text="Enter Your Name" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:drawablePadding="5dp"
+        android:text="View Now" />
+
+</LinearLayout>

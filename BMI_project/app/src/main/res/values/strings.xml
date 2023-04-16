@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BMI Example</string>
+    <string name="hint_wt">Enter your Weight</string>
+    <string name="hint_htF">Enter your height in Feet</string>
+    <string name="hint_htI">Enter your height in Inch</string>
+</resources>
