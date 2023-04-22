@@ -20,20 +20,43 @@ public class MyDBHelper extends SQLiteOpenHelper {
     private static final String KEY_PHONE_NO = "phone_no";
 
 
+
+    private static final String CREATE_TABLE_LOG = "CREATE TABLE " + TABLE_CONTACT + " ( " +
+            KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            KEY_NAME + " TEXT NOT NULL, " +
+            KEY_PHONE_NO + " TEXT NOT NULL " +
+            " ) ";
+
+
+//        db.execSQL("CREATE TABLE " + TABLE_CONTACT +
+//            " ( " + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_NAME + "TEXT NOT NULL, " + KEY_PHONE_NO + "TEXT NOT NULL " + " ) " );
+//
+
+
+    private SQLiteDatabase database;
+
+
     public MyDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
 
         // CREATE TABLE contacts (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, phone_no TEXT);
-        db.execSQL("CREATE TABLE " + TABLE_CONTACT +
-                "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_NAME + "TEXT," + KEY_PHONE_NO + "TEXT" + ")");
 
-        SQLiteDatabase database = this.getWritableDatabase();
 
-        database.close();
+
+
+//        db.execSQL("CREATE TABLE " + TABLE_CONTACT +
+//                " ( " + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_NAME + "TEXT NOT NULL, " + KEY_PHONE_NO + "TEXT NOT NULL " + " ) " );
+
+//        database = this.getWritableDatabase();
+
+//        database.close();
+        db.execSQL(CREATE_TABLE_LOG);
         
     }
 
@@ -45,21 +68,23 @@ public class MyDBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-     public void addContact(java.lang.String name, java.lang.String phone_no){
-        SQLiteDatabase db = this.getWritableDatabase();
+     public void addContact(String name, String phone_no){
+         database = this.getWritableDatabase();
 
          ContentValues values = new ContentValues();
          values.put(KEY_NAME, name);
-         values.put(KEY_PHONE_NO, phone_no);
+//         values.put(KEY_PHONE_NO, phone_no);
 
-        db.insert(TABLE_CONTACT, null, values);
+        database.insert(TABLE_CONTACT, null, values);
+
+         database.close();
      }
 
      public ArrayList<ContactModel> fetchContext(){
 
-        SQLiteDatabase db = this.getReadableDatabase();
+         database = this.getReadableDatabase();
 
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_CONTACT, null);
+        Cursor cursor = database.rawQuery("SELECT * FROM " + TABLE_CONTACT, null);
 
         ArrayList<ContactModel> arrContacts = new ArrayList<>();
 
@@ -79,7 +104,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
      }
 
      public void updateContact(ContactModel contactModel){
-        SQLiteDatabase database = this.getWritableDatabase();
+        database = this.getWritableDatabase();
 
         ContentValues cv = new ContentValues();
         cv.put(KEY_PHONE_NO, contactModel.phone_no);
@@ -89,7 +114,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
 
      public void DeleteContact(int id){
 
-        SQLiteDatabase database = this.getWritableDatabase();
+        database = this.getWritableDatabase();
 
         database.delete(TABLE_CONTACT, KEY_ID+ " = ? ", new String[]{String.valueOf(id)});
 
