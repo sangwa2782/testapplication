@@ -45,7 +45,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-     public void addContact(String name, String phone_no){
+     public void addContact(java.lang.String name, java.lang.String phone_no){
         SQLiteDatabase db = this.getWritableDatabase();
 
          ContentValues values = new ContentValues();
@@ -75,6 +75,24 @@ public class MyDBHelper extends SQLiteOpenHelper {
         }
 
         return arrContacts;
+
+     }
+
+     public void updateContact(ContactModel contactModel){
+        SQLiteDatabase database = this.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+        cv.put(KEY_PHONE_NO, contactModel.phone_no);
+
+        database.update(TABLE_CONTACT, cv, KEY_ID+" = "+ contactModel.id, null);
+     }
+
+     public void DeleteContact(int id){
+
+        SQLiteDatabase database = this.getWritableDatabase();
+
+        database.delete(TABLE_CONTACT, KEY_ID+ " = ? ", new String[]{String.valueOf(id)});
+
 
      }
 }
