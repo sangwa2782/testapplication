@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
                 TextView txtMsg = view.findViewById(R.id.txtmsg);
 
-                txtMsg.setText("Message sent successfullu");
+                txtMsg.setText("Message sent successfully");
 
                 toast.setDuration(Toast.LENGTH_LONG);
 

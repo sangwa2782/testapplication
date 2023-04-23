@@ -23,8 +23,8 @@ public class MyDBHelper extends SQLiteOpenHelper {
 
     private static final String CREATE_TABLE_LOG = "CREATE TABLE " + TABLE_CONTACT + " ( " +
             KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            KEY_NAME + " TEXT NOT NULL, " +
-            KEY_PHONE_NO + " TEXT NOT NULL " +
+            KEY_NAME + " TEXT, " +
+            KEY_PHONE_NO + " TEXT " +
             " ) ";
 
 
@@ -73,7 +73,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
 
          ContentValues values = new ContentValues();
          values.put(KEY_NAME, name);
-//         values.put(KEY_PHONE_NO, phone_no);
+         values.put(KEY_PHONE_NO, phone_no);
 
         database.insert(TABLE_CONTACT, null, values);
 
