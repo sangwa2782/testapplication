@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginVertical="50dp"
+        app:lottie_rawRes="@raw/form2"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />
+
+
+    <!--Edit text to enter course name-->
+    <EditText
+        android:id="@+id/idEdtCourseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="#fff"
+        android:background="@drawable/bt_round"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="30dp"
+        android:elevation="15dp"
+
+
+        android:hint="Enter course Name" />
+
+    <!--edit text to enter course duration-->
+    <EditText
+        android:id="@+id/idEdtCourseDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="#fff"
+        android:background="@drawable/bt_round"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="30dp"
+        android:elevation="15dp"
+
+        android:hint="Enter Course Duration" />
+
+    <!--edit text to display course tracks-->
+    <EditText
+        android:id="@+id/idEdtCourseTracks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="#fff"
+        android:background="@drawable/bt_round"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="30dp"
+        android:elevation="15dp"
+
+        android:hint="Enter Course Tracks" />
+
+    <!--edit text for course description-->
+    <EditText
+        android:id="@+id/idEdtCourseDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="#fff"
+        android:background="@drawable/bt_round"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="30dp"
+        android:elevation="15dp"
+
+        android:hint="Enter Course Description" />
+
+    <!--button for adding new course-->
+    <Button
+        android:id="@+id/idBtnAddCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:textColor="#fff"
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:text="Add Course"
+        android:elevation="15dp"
+
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idBtnReadCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:textColor="#ffffff"
+        android:backgroundTint="#361365"
+        android:text="Read All Courses"
+        android:textAllCaps="false"
+        android:elevation="15dp"
+        />
+
+</LinearLayout>

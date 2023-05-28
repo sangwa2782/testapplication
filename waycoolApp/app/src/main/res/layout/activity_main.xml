@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/homeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?attr/actionBarSize"
+        />
+
+<!-- START OF TOP HEADING MENU, GOOGLE LOCATION & PROFILE   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="menu"
+                android:layout_weight="1" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginRight="11dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ENERGY BUILDING, SEC 16A NOIDA,4TH LANE"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:textAlignment="center" />
+                    <ImageButton
+                        android:id="@+id/getMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_arrow_drop_down_24"
+                        android:background="#eee"
+                        android:layout_marginRight="15dp" />
+                </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/baseline_account_circle_24" />
+        </LinearLayout>
+
+        <!-- START OF TOP HEADING MENU, GOOGLE LOCATION & PROFILE   -->
+
+        <!-- START OF SEARCH PLACE   -->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="0dp"
+                android:src="@drawable/baseline_search_24"
+                />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:padding="0dp"
+                android:layout_toRightOf="@+id/searchBtn"
+                android:text="What you want to find, search here"
+                android:textAlignment="center" />
+        </RelativeLayout>
+
+        <!-- START OF SEARCH PLACE   -->
+
+        <!-- START OF BANNER OF PRODUCTS   -->
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginRight="11dp"
+                    android:src="@drawable/banner1" />
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginRight="11dp"
+                    android:src="@drawable/banner2" />
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginRight="11dp"
+                    android:src="@drawable/banner3" />
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:layout_marginRight="11dp"
+                    android:src="@drawable/banner4" />
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- END OF BANNER OF PRODUCTS   -->
+
+        <!-- START OF DELIVERY LOCATION   -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="105dp"
+            android:weightSum="100"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:id="@+id/delivary_location"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="fill_vertical"
+                android:layout_weight="50"
+                >
+                <TextView
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:text="This is final delivary point"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="10sp"
+                    android:textColor="@color/accent"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:src="@drawable/delivary"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delivary Point startts"
+                        android:textSize="10sp"
+                        android:textColor="@color/accent"
+                        />
+                    <TextView
+                        android:id="@+id/dlvryPointBlow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="starts here"
+                        android:textSize="10sp"
+                        android:textColor="@color/accent"
+
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="clip_vertical"
+                android:layout_weight="50"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your product is reached upto"
+                    android:textSize="10sp"
+                    android:textColor="@color/accent"
+                    android:paddingVertical="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/accent"
+                    android:text="Lajpat Nagar, New Delhi"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please  the delivary"
+                    android:textColor="@color/accent"
+                    android:textSize="10sp"
+                    android:paddingTop="5dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- END OF DELIVERY LOCATION   -->
+
+        <!-- START OF PRODUCTS MENUS   -->
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:padding="5dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingVertical="11dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popular"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="#FF9800"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Requested"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondry"
+                    android:paddingHorizontal="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Offers"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondry"
+                    android:paddingHorizontal="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Where's New"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondry"
+                    android:paddingHorizontal="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Searched"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondry"
+                    android:paddingHorizontal="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popular"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondry"
+                    android:paddingHorizontal="15dp"
+                    />
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- END OF PRODUCTS MENUS   -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="11dp"
+                android:background="#eee"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#eee"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#F33434"
+                                android:paddingHorizontal="5dp"
+                                android:paddingVertical="3dp"
+                                android:text="25%"
+                                android:textColor="#fff"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:background="#aaa"
+                                android:paddingHorizontal="5dp"
+                                android:paddingVertical="3dp"
+                                android:text="In Season"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/cartImg"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="11dp"
+                            android:src="@drawable/c_apple" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp">
+
+                        <TextView
+                            style="@style/cartproName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="Washingto apples" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="20dp"
+                            >
+                            <TextView
+                                android:id="@+id/pro_top"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Washingto apples" />
+
+
+                            <TextView
+                                android:id="@+id/pro_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:text="Washingto apples" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="Deliver on" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="qty" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="60dp"
+                                android:layout_height="25dp"
+                                android:backgroundTint="#EF9712"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                app:cardCornerRadius="50dp"
+                                android:padding="5dp"
+                                >
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    >
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        app:cardCornerRadius="15dp"
+                                        >
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="dsflskld"
+                                            android:padding="5dp"
+                                            android:background="#fff"
+                                            android:textColor="#E48D0B"
+                                            />
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/homeBtmView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:menu="@menu/home_navigation"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>
